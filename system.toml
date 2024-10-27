@@ -1,4 +1,18 @@
 [server]
-port = 123123
+port = 12312
 name = "asdasd"
 version = "1.0.0"
+
+
+[log]
+log-dir = ""
+level = "info"
+type="file"
+file-size-mb=1
+retention-days=15
+
+[sys_mysql]
+host=""
+user=""
+password=""
+database=""
