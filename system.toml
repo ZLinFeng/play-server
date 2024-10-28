@@ -12,7 +12,7 @@ file-size-mb=1
 retention-days=15
 
 [sys_mysql]
-host=""
-user=""
-password=""
-database=""
+host="127.0.0.1"
+user="root"
+password="zlf@1218"
+database="db_play"
