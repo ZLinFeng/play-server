@@ -18,4 +18,7 @@ func main() {
 	// 初始化数据库
 	global.DB = initial.InitDb(&global.AppConfig.SysMysql)
 	initial.RegisterTables()
+
+	// 启动服务
+	initial.InitServer(global.AppConfig)
 }

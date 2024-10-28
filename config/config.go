@@ -17,9 +17,10 @@ type EnvConfig struct {
 }
 
 type ServerConfig struct {
-	Port    uint32 `mapstructure:"port"`
-	AppName string `mapstructure:"name"`
-	Version string `mapstructure:"version"`
+	Port        uint32 `mapstructure:"port"`
+	AppName     string `mapstructure:"name"`
+	Version     string `mapstructure:"version"`
+	RoutePrefix string `mapstructure:"route-prefix"`
 }
 
 type Config struct {

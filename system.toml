@@ -2,6 +2,7 @@
 port = 12312
 name = "asdasd"
 version = "1.0.0"
+route-prefix = ""
 
 
 [log]
