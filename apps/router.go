@@ -2,12 +2,12 @@ package apps
 
 import (
 	"github.com/ZLinFeng/play-server/apps/schedule"
-	"github.com/ZLinFeng/play-server/apps/sys"
+	sysRouter "github.com/ZLinFeng/play-server/apps/sys/router"
 )
 
 var RouterGroupApp = new(RouterGroup)
 
 type RouterGroup struct {
-	System   sys.SystemRouterGroup
+	System   sysRouter.SystemRouterGroup
 	Schedule schedule.RouterGroup
 }

@@ -7,6 +7,7 @@ import (
 
 type AuthApi struct{}
 
-func (api *AuthApi) Login(username, password string, c *gin.Context) {
+func (api *AuthApi) Login(c *gin.Context) {
+	authService.Login("a", "b")
 	response.Ok(c)
 }
