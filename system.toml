@@ -7,7 +7,7 @@ version = "1.0.0"
 [log]
 log-dir = ""
 level = "info"
-type="file"
+type="std"
 file-size-mb=1
 retention-days=15
 

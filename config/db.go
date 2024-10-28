@@ -8,5 +8,6 @@ type SysMysql struct {
 }
 
 func (m *SysMysql) Dsn() string {
-	return m.User + ":" + m.Password + "@tcp(" + m.Host + ")/" + m.Database + "?"
+	return m.User + ":" + m.Password + "@tcp(" + m.Host + ")/" + m.Database + "?" +
+		"charset=utf8mb4&parseTime=True&loc=Asia%2FShanghai&timeout=10s&readTimeout=30s&writeTimeout=30s"
 }

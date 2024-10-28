@@ -12,9 +12,10 @@ func main() {
 
 	initial.PrintBanner(global.AppConfig)
 
-	//配置日志
+	// 初始化日志
 	global.Logger = initial.InitLog(&global.AppConfig.Log)
 
-	//数据库
-	//global.DB = initial.InitDb(&global.AppConfig.SysMysql)
+	// 初始化数据库
+	global.DB = initial.InitDb(&global.AppConfig.SysMysql)
+	initial.RegisterTables()
 }
