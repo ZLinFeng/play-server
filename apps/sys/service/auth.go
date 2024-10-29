@@ -36,5 +36,18 @@ func (service *AuthService) Register(username, password string) (bool, error) {
 	if len(username) == 0 || len(password) == 0 {
 		return false, errors.New("username or password is empty")
 	}
+	var user system.SysUser
+	err := global.DB.Where("username = ?", username).First(&user).Error
+	if err != nil {
+		return false, errors.New("user exist already")
+	}
+
+	user = system.SysUser{
+		Username: username,
+		Password: common.BcryptHash(password),
+	}
+
+	global.DB.Create(&user)
+
 	return true, nil
 }
