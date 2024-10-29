@@ -17,6 +17,9 @@ var (
 
 	AuthFailCode uint = 10_401
 	AuthFailMsg       = "auth failed"
+
+	ErrorEntityCode uint = 10_422
+	ErrorEntityMsg       = "unprocessable entity"
 )
 
 type Response struct {

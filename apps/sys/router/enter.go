@@ -16,8 +16,8 @@ var (
 )
 
 func (g *SystemRouterGroup) InitSystemRouter(pub *gin.RouterGroup, pri *gin.RouterGroup) {
-	pubSysRouter := pub.Group("sys")
-	priSysRouter := pri.Group("sys")
+	pubSysRouter := pub.Group("sys/api")
+	priSysRouter := pri.Group("sys/api")
 	g.InitAuthRouter(pubSysRouter) // 权限路由
 	g.InitJwtRouter(priSysRouter)  // JWT路由
 }
