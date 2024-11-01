@@ -19,6 +19,7 @@ func (api *AuthApi) Login(c *gin.Context) {
 	_, loginErr := authService.Login(&userReq)
 	if loginErr != nil {
 		response.FailWithDetailed(response.AuthFailCode, response.AuthFailMsg, c)
+		return
 	}
 	response.Ok(c)
 }
