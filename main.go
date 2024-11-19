@@ -19,6 +19,9 @@ func main() {
 	global.DB = initial.InitDb(&global.AppConfig.SysMysql)
 	initial.RegisterTables()
 
+	// 启动gRpc服务
+	go initial.InitServerRpc(&global.AppConfig.Transport)
+
 	// 启动服务
 	initial.InitServer(global.AppConfig)
 }

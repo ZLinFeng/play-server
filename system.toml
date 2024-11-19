@@ -8,12 +8,16 @@ route-prefix = ""
 [log]
 log-dir = ""
 level = "info"
-type="std"
-file-size-mb=1
-retention-days=15
+type = "std,file"
+file-size-mb = 1
+retention-days = 15
 
 [sys_mysql]
-host="127.0.0.1"
-user="root"
-password="123456"
-database="play_v1"
+host = "127.0.0.1"
+user = "root"
+password = "123456"
+database = "play_v1"
+
+[transport]
+server-port = 12313
+client-port = 12314

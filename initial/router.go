@@ -10,7 +10,7 @@ import (
 func InitRouter() *gin.Engine {
 	router := gin.New()
 
-	router.Use(middleware.FormatRecovery()).Use(gin.Logger()).Use(middleware.Cors())
+	router.Use(middleware.FormatRecovery()).Use(middleware.Cors())
 
 	privateRouterGroup := router.Group(global.AppConfig.Server.RoutePrefix)
 	publicRouterGroup := router.Group(global.AppConfig.Server.RoutePrefix)
