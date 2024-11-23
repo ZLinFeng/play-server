@@ -7,4 +7,5 @@ type UserReq struct {
 	DeptId   uint64   `json:"deptId"`
 	RoleIds  []uint64 `json:"roleIds"`
 	Avatar   string   `json:"avatar"`
+	Enable   int      `json:"active" binding:"required"`
 }

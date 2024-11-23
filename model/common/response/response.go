@@ -1,8 +1,9 @@
 package response
 
 import (
-	"github.com/gin-gonic/gin"
 	"net/http"
+
+	"github.com/gin-gonic/gin"
 )
 
 var (
@@ -20,6 +21,15 @@ var (
 
 	ErrorEntityCode uint = 10_422
 	ErrorEntityMsg       = "unprocessable entity"
+
+	AddFailCode    uint = 10_600
+	AddFailMsg          = "add failed"
+	SearchFailCode uint = 10_700
+	SearchFailMsg       = "search failed"
+	UpdateFailCode uint = 10_800
+	UpdateFailMsg       = "update failed"
+	DeleteFailCode uint = 10_900
+	DeleteFailMsg       = "delete failed"
 )
 
 type Response struct {
