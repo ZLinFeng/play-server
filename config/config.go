@@ -4,10 +4,11 @@ import (
 	"errors"
 	"flag"
 	"fmt"
-	"github.com/spf13/viper"
 	"os"
 	"path/filepath"
 	"runtime"
+
+	"github.com/spf13/viper"
 )
 
 type EnvConfig struct {
@@ -23,11 +24,17 @@ type ServerConfig struct {
 	RoutePrefix string `mapstructure:"route-prefix"`
 }
 
+type TransportConfig struct {
+	ServerPort int `mapstructure:"server-port"`
+	ClientPort int `mapstructure:"client-port"`
+}
+
 type Config struct {
-	Env      EnvConfig
-	Server   ServerConfig `mapstructure:"server"`
-	Log      LogConfig    `mapstructure:"log"`
-	SysMysql SysMysql     `mapstructure:"sys_mysql"`
+	Env       EnvConfig
+	Server    ServerConfig    `mapstructure:"server"`
+	Log       LogConfig       `mapstructure:"log"`
+	SysMysql  SysMysql        `mapstructure:"sys_mysql"`
+	Transport TransportConfig `mapstructure:"transport"`
 }
 
 func InitConfig() *Config {

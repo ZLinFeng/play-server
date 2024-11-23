@@ -2,9 +2,10 @@ package initial
 
 import (
 	"fmt"
-	"github.com/ZLinFeng/play-server/config"
 	"os"
 	"os/user"
+
+	"github.com/ZLinFeng/play-server/config"
 )
 
 const Banner = `            

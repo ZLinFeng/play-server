@@ -2,10 +2,11 @@ package config
 
 import (
 	"fmt"
-	"github.com/pkg/errors"
 	"os"
 	"path/filepath"
 	"strings"
+
+	"github.com/pkg/errors"
 )
 
 var (
@@ -51,14 +52,14 @@ func (c *LogConfig) Check() error {
 			if os.IsNotExist(err) {
 				createErr := os.MkdirAll(c.Dir, os.ModePerm)
 				if createErr != nil {
-					return errors.New(fmt.Sprintf("fatal error while create log dir."))
+					return errors.New("fatal error while create log dir.")
 				}
 			} else {
-				return errors.New(fmt.Sprintf("fatal error while check log dir."))
+				return errors.New("fatal error while check log dir.")
 			}
 		} else {
 			if !dir.IsDir() {
-				return errors.New(fmt.Sprintf("log-dir must be a directory."))
+				return errors.New("log-dir must be a directory.")
 			}
 		}
 	}
